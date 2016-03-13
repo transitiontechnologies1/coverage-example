@@ -37,7 +37,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/conf/applicationContext.xml"})
-public class HelloWorldIntegrationTest {
+public class HelloWorldIT {
 	
 	// The webdriver
 	private static WebDriver driver;
