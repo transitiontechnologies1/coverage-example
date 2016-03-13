@@ -15,14 +15,19 @@
  */
 package com.example;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
+import java.io.File;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -39,7 +44,10 @@ public class HelloWorldIntegrationTest {
 
 	@BeforeClass
 	public static void initWebDriver() {
-		driver = new FirefoxDriver();		
+		
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		
+		driver = new ChromeDriver();		
 	}
 	
 	@AfterClass
